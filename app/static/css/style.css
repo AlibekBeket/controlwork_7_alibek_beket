@@ -40,6 +40,18 @@ body{
     justify-content: space-between;
     width: 50px;
 }
+.guest_record_update_link{
+    color: DodgerBlue;
+}
+.guest_record_update_link:hover{
+    color: DarkBlue;
+}
+.guest_record_delete_link{
+    color: OrangeRed;
+}
+.guest_record_delete_link:hover{
+    color: Maroon;
+}
 .form{
     margin-top: 50px;
 }
@@ -63,10 +75,18 @@ body{
 }
 .button_add_or_create a{
     font-size: 22px;
+    color: DarkOliveGreen;
+}
+.button_add_or_create a:hover{
+    color: green;
 }
 .button_add_or_create input{
     padding: 2px 20px;
-    background: Green;
+    background: SteelBlue;
+    color: white;
+}
+.button_add_or_create input:hover{
+    background: DarkSlateGray;
     color: White;
 }
 .guest_record_block{
@@ -91,7 +111,7 @@ body{
     justify-content: space-between;
 }
 .yes_delete{
-    background: white;
+    background: LightGrey;
     padding: 2px 20px;
     color: black;
 }
@@ -100,7 +120,7 @@ body{
     color: white;
 }
 .no_delete{
-    background: white;
+    background: LightGrey;
     padding: 2px 20px;
     color: black;
 }
