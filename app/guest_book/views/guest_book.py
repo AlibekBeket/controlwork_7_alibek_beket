@@ -52,3 +52,13 @@ def guest_record_update(request, pk):
         guest_record.text = request.POST.get('text')
         guest_record.save()
         return redirect('guest_book_list')
+
+def guest_record_delete(request, pk):
+    guest_record = get_object_or_404(GuestBook, pk=pk)
+    return render(request, 'guest_record_confirm_delete.html', context={'guest_record': guest_record})
+
+
+def guest_record_confirm_delete(request, pk):
+    guest_record = get_object_or_404(GuestBook, pk=pk)
+    guest_record.delete()
+    return redirect('guest_book_list')

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}Guest Book{% endblock %}
+{% block content %}
+<h1>Удаление Записи</h1>
+<div class="guest_record_block">
+    <p><span>Имя:</span><span class="guest_record_text">{{guest_record.author_name}}</span></p>
+    <p><span>Email:</span><span class="guest_record_text">{{guest_record.author_email}}</span></p>
+    <p><span>Текст:</span><span class="guest_record_text">{{guest_record.text}}</span></p>
+    <p><span>Обновлено:</span><span class="guest_record_text">{{guest_record.updated_at}}</span></p>
+</div>
+<h2 class="guest_record_delete_question">Вы действительно хотити удалить запись?</h2>
+<div class="form_delete_block">
+    <form action="{% url 'guest_record_confirm_delete' guest_record.pk %}" method="post">
+        {% csrf_token %}
+        <button class="yes_delete" type="submit">Да</button>
+    </form>
+    <form action="{% url 'guest_book_list' %}" method="get">
+        {% csrf_token %}
+        <button class="no_delete"  type="submit">Нет</button>
+    </form>
+</div>
+{% endblock %}

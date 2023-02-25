@@ -57,9 +57,54 @@ body{
 }
 .button_add_or_create{
     margin-left: 65px;
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+}
+.button_add_or_create a{
+    font-size: 22px;
 }
 .button_add_or_create input{
     padding: 2px 20px;
     background: Green;
     color: White;
+}
+.guest_record_block{
+    width: 500px;
+    margin-top: 10px;
+}
+.guest_record_block p{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2px;
+}
+.guest_record_text{
+    width: 400px;
+}
+.guest_record_delete_question{
+    color: Maroon;
+    margin: 10px 0;
+}
+.form_delete_block{
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+.yes_delete{
+    background: white;
+    padding: 2px 20px;
+    color: black;
+}
+.yes_delete:hover{
+    background: Red;
+    color: white;
+}
+.no_delete{
+    background: white;
+    padding: 2px 20px;
+    color: black;
+}
+.no_delete:hover{
+    background: Green;
+    color: white;
 }
