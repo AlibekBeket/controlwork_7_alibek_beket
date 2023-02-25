@@ -27,4 +27,10 @@
     <div class="guest_text">{{guest_info.text}}</div>
 </div>
 {% endfor %}
+<div class="form">
+    <h2>Добавить Новую Запись</h2>
+    <form class="post_form" action="{% url 'guest_book_list' %}" method="post">
+        {% include 'partials/guest_book_form.html' with button_text="Добавить" %}
+    </form>
+</div>
 {% endblock %}

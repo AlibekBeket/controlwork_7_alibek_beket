@@ -40,3 +40,26 @@ body{
     justify-content: space-between;
     width: 50px;
 }
+.form{
+    margin-top: 50px;
+}
+.post_form{
+    margin-top: 20px;
+}
+.post_form p{
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+.post_form p input{
+    width: 331px;
+}
+.button_add_or_create{
+    margin-left: 65px;
+}
+.button_add_or_create input{
+    padding: 2px 20px;
+    background: Green;
+    color: White;
+}
