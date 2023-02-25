@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from guest_book.models import GuestBook
 
@@ -24,3 +24,31 @@ def guest_book_view(request):
     else:
         GuestBook.objects.create(**form.cleaned_data)
         return redirect(reverse('guest_book_list'))
+
+def guest_record_update(request, pk):
+    guest_record = get_object_or_404(GuestBook, pk=pk)
+    if not request.POST:
+        guest_record_dict = {
+            'author_name': guest_record.author_name,
+            'author_email': guest_record.author_email,
+            'text': guest_record.text
+        }
+        form = GuestBookForm(data=guest_record_dict)
+        context = {
+            'guest_record': guest_record,
+            'form': form
+        }
+        return render(request, 'guest_record_update.html', context=context)
+    form = GuestBookForm(data=request.POST)
+    if not form.is_valid():
+        context = {
+            'guest_record': guest_record,
+            'form': form
+        }
+        return render(request, 'guest_record_update.html', context=context)
+    else:
+        guest_record.author_name = request.POST.get('author_name')
+        guest_record.author_email = request.POST.get('author_email')
+        guest_record.text = request.POST.get('text')
+        guest_record.save()
+        return redirect('guest_book_list')

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Guest Book{% endblock %}
+{% block content %}
+<h1>Редактировать Запись</h1>
+<div class="form">
+    <form class="post_form" action="{% url 'guest_record_update' guest_record.pk %}" method="post">
+        {% include 'partials/guest_book_form.html' with button_text="Сохранить" %}
+    </form>
+</div>
+{% endblock %}
