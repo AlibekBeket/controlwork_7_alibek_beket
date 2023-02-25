@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Guest Book{% endblock %}
+{% block content %}
+<h1>Гостевая Книга</h1>
+{% for guest_info in guest_book_list %}
+    <div class="guest_info_block">
+        <p>{{guest_info.author_name}} ({{guest_info.author_email}})</p>
+        <p>{{guest_info.text}}</p>
+    </div>
+{% endfor %}
+{% endblock %}
