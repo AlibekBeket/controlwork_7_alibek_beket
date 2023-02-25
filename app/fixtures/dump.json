@@ -1,0 +1,74 @@
+[
+{
+  "model": "guest_book.guestbook",
+  "pk": 1,
+  "fields": {
+    "author_name": "Alibek",
+    "author_email": "alibek@gmail.com",
+    "text": "Hello. I'm Alibek",
+    "created_at": "2023-02-25T05:55:56.181Z",
+    "updated_at": "2023-02-25T05:55:56.181Z",
+    "status": "active"
+  }
+},
+{
+  "model": "guest_book.guestbook",
+  "pk": 2,
+  "fields": {
+    "author_name": "Tima",
+    "author_email": "timatim@gmail.com",
+    "text": "I'm Timur",
+    "created_at": "2023-02-25T06:00:17.157Z",
+    "updated_at": "2023-02-25T06:00:17.157Z",
+    "status": "blocked"
+  }
+},
+{
+  "model": "guest_book.guestbook",
+  "pk": 3,
+  "fields": {
+    "author_name": "John",
+    "author_email": "john_doo@mail.ru",
+    "text": "John here",
+    "created_at": "2023-02-25T06:01:27.382Z",
+    "updated_at": "2023-02-25T06:01:27.382Z",
+    "status": "active"
+  }
+},
+{
+  "model": "guest_book.guestbook",
+  "pk": 4,
+  "fields": {
+    "author_name": "Dastan",
+    "author_email": "das@gmail.com",
+    "text": "Hello Almaty",
+    "created_at": "2023-02-25T06:02:29.732Z",
+    "updated_at": "2023-02-25T06:02:29.732Z",
+    "status": "active"
+  }
+},
+{
+  "model": "guest_book.guestbook",
+  "pk": 5,
+  "fields": {
+    "author_name": "Alih",
+    "author_email": "alihen_alih@mail.ru",
+    "text": "I love bitbox",
+    "created_at": "2023-02-25T06:03:25.739Z",
+    "updated_at": "2023-02-25T06:03:25.739Z",
+    "status": "blocked"
+  }
+},
+{
+  "model": "guest_book.guestbook",
+  "pk": 6,
+  "fields": {
+    "author_name": "Baha",
+    "author_email": "my_mail@mail.com",
+    "text": "You're my friend",
+    "created_at": "2023-02-25T06:04:55.169Z",
+    "updated_at": "2023-02-25T06:04:55.169Z",
+    "status": "active"
+  }
+}
+]
