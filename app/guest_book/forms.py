@@ -31,3 +31,13 @@ class GuestBookForm(forms.ModelForm):
         if len(text) < 5:
             raise ValidationError('Текст не может состоять из 1 или 2 символов')
         return text
+
+
+class GuestFind(forms.Form):
+    name = forms.CharField(max_length=200, required=True, label='', widget=forms.TextInput(attrs={'placeholder': 'Введите имя'}))
+
+    def clean_name(self):
+        author_name = self.cleaned_data.get('name')
+        if len(author_name) < 3:
+            raise ValidationError('Имя не может состоять из 1 или 2 символов')
+        return author_name

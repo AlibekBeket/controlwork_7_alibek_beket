@@ -1,6 +1,6 @@
 {% csrf_token %}
 {{ form.as_p }}
-<div class="button_add_or_create">
+<div class="button_update_or_create">
     <input type="submit" value="{{ button_text }}">
     <a href="{% url 'guest_book_list' %}">Отмена</a>
 </div>

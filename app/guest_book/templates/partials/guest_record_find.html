@@ -1,0 +1,8 @@
+{% csrf_token %}
+{{ form_find.as_p }}
+<div class="button_find_author">
+    <input type="submit" value="Найти">
+    {% if return_post_find_name %}
+    <a href="{% url 'guest_book_list' %}">Вернуться на главную страницу</a>
+    {% endif %}
+</div>

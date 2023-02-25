@@ -67,25 +67,25 @@ body{
 .post_form p input{
     width: 331px;
 }
-.button_add_or_create{
+.button_update_or_create{
     margin-left: 65px;
     display: flex;
     justify-content: space-between;
     width: 320px;
 }
-.button_add_or_create a{
+.button_update_or_create a{
     font-size: 22px;
     color: DarkOliveGreen;
 }
-.button_add_or_create a:hover{
+.button_update_or_create a:hover{
     color: green;
 }
-.button_add_or_create input{
+.button_update_or_create input{
     padding: 2px 20px;
     background: SteelBlue;
     color: white;
 }
-.button_add_or_create input:hover{
+.button_update_or_create input:hover{
     background: DarkSlateGray;
     color: White;
 }
@@ -127,4 +127,25 @@ body{
 .no_delete:hover{
     background: Green;
     color: white;
+}
+.button_find_author{
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+}
+.button_find_author a{
+    font-size: 15px;
+    color: DarkOliveGreen;
+}
+.button_find_author a:hover{
+    color: green;
+}
+.button_find_author input{
+    padding: 2px 20px;
+    background: SteelBlue;
+    color: white;
+}
+.button_find_author input:hover{
+    background: DarkSlateGray;
+    color: White;
 }

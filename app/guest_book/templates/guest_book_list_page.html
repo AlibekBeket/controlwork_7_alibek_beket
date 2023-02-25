@@ -2,6 +2,11 @@
 {% block title %}Guest Book{% endblock %}
 {% block content %}
 <h1>Гостевая Книга</h1>
+<div class="form">
+    <form class="post_form" action="{% url 'guest_book_list' %}" method="post">
+        {% include 'partials/guest_record_find.html' %}
+    </form>
+</div>
 {% for guest_info in guest_book_list %}
 <div class="guest_info_block">
     <div class="guest_name_block">
